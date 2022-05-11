@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-import Titulo from "../Titulo";
-import Conta from "../Conta";
-import Extrato from "../Extrato";
+import Titulo from "../Titulo"
+import Conta from "../Conta"
+import Extrato from "../Extrato"
 
-const Container = styled.div`
+const ContainerDiv = styled.div`
   background-color: ${({ theme }) => theme.body};
   min-height: 90vh;
   padding: 0px 15vw;
-`;
+`
 
 const Conteudo = styled.section`
   display: flex;
@@ -20,16 +20,17 @@ const Conteudo = styled.section`
   @media (max-width: 800px) {
     flex-direction: column;
   }
-`;
+`
 
-export default () => {
+const Container = () => {
   return (
-    <Container>
+    <ContainerDiv>
       <Titulo>Olá Fulano!</Titulo>
       <Conteudo>
         <Conta />
         <Extrato />
       </Conteudo>
-    </Container>
-  );
-};
+    </ContainerDiv>
+  )
+}
+export default Container
